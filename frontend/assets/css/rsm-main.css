@@ -1,0 +1,210 @@
+.rsm-menu {
+    padding:10px 0;
+}
+.rsm-main-menu {
+    margin:10px 0;
+}
+.rsm-menu-wrapper {
+    width:90%;
+    margin:0 auto;
+}
+.rsm-menu ul li {
+    position:relative;
+}
+
+.rsm-toggle {
+    background: transparent !important;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    margin: inherit;
+    padding: 0;
+    display:inline;
+    margin-right: 1%;
+    border:0;
+}
+.rsm-toggle:focus {
+    background-color: transparent;
+}
+.rsm-toggle:hover {
+    background-color: transparent;
+}
+.rsm-toggle:focus, .rsm-toggle:active {
+    background-color: transparent;
+    outline: none;
+}
+.rsm-toggle-wrapper .rsm-toggle-label {
+    display:inline;
+}
+.rsm-toggle span {
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 25px;
+    background-color: #000;
+    border-radius: 5px;
+    opacity: 1;
+    left: 0;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+.rsm-toggle span:nth-child(1) {
+    top: 0;
+}
+.rsm-toggle span:nth-child(2) {
+    top: 5px;
+}
+.rsm-toggle span:nth-child(3) {
+    top: 10px;
+}
+.rsm-toggle.activated {
+    top:-7px;
+}
+.rsm-toggle.activated span.rsm-toggle-label {
+    position:relative;
+    top:0;
+}
+.rsm-toggle.activated span {
+    height: 3px;
+}
+.rsm-toggle.activated span:nth-child(1) {
+    top: 10px;
+    -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+.rsm-toggle.activated span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+.rsm-toggle.activated span:nth-child(3) {
+    top: 10px;
+    -webkit-transform: rotate(-135deg);
+      -ms-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+.rsm-toggle-container {
+    position:fixed;
+    top:0;
+    height:auto;
+    width:100%;
+    line-height: 40px;
+    z-index:9999;
+}
+
+.rsm-toggle-container.no_bar {
+    top:32px;
+    /* min-width:110px; */
+    width:auto;
+    padding:0 10px;
+}
+
+.rsm-toggle-container.no_bar.dir-left {
+    left:32px;
+}
+
+.rsm-toggle-container.no_bar.dir-right {
+    right:32px;
+}
+
+.rsm-toggle-container.no_bar.activated.dir-left {
+    left:270px;
+    -webkit-animation:linear alternate;
+    -webkit-animation-name: moveRight;
+    -webkit-animation-duration: .5s;
+}
+
+.rsm-toggle-container.no_bar.activated.dir-right {
+    right:270px;
+    -webkit-animation:linear alternate;
+    -webkit-animation-name: moveLeft;
+    -webkit-animation-duration: .5s;
+}
+
+@-webkit-keyframes moveRight {
+    0% { left: 0;}
+    100%{ left: 270px;}
+}
+
+@-webkit-keyframes moveLeft {
+    0% { right: 0;}
+    100%{ right: 270px;}
+}
+
+.rsm-toggle-container .rsm-toggle-wrapper {
+    width:97%;
+    margin:0 auto;
+    display:block;
+}
+
+body.admin-bar .rsm-toggle-container.bar {
+    top:32px;
+}
+
+.rsm-toggle-container.light {
+    background:#f8f8f8;
+    color:#333;
+    box-shadow:0 0 5px 5px #ebebeb inset;
+}
+
+.rsm-toggle-container.dark {
+    background:#333;
+    color:#f8f8f8;
+    box-shadow:0 0 5px 5px #222 inset;
+}
+
+.rsm-toggle-container.dark .rsm-toggle span {
+    background:#f8f8f8;
+}
+
+.rsm-toggle-container.bar.dark {
+    background:#333;
+    color:#f8f8f8;
+    box-shadow:0 0 5px 5px #222 inset;
+    text-decoration: none;
+}
+.rsm-toggle-container.no_bar {
+    text-decoration:none;
+}
+.rsm-toggle-container.dir-left {
+    text-align:left;
+}
+.rsm-toggle-container.dir-right {
+    text-align:right;
+}
+.sidr form {
+    margin:0;
+}
+.sidr-widget-title {
+    padding:10px 0;
+    border-bottom:1px solid #222;
+    margin-bottom:10px;
+}
+.rsm-menu .widget,
+.rsm-menu .menu {
+    margin:0 0 25px;
+}
+
+.rsm-menu.dark ul > li.current-menu-item > a {
+    box-shadow: 0 0 15px 3px #222 inset;
+}
+.rsm-menu.dark ul > li.current-menu-ancestor > a {
+    box-shadow: 0 0 15px 3px #222 inset;
+}
+.rsm-menu.light ul > li.current-menu-item > a {
+    box-shadow: 0 0 15px 3px #ebebeb inset;
+}
+.rsm-menu.light ul > li.current-menu-ancestor > a {
+    box-shadow: 0 0 15px 3px #ebebeb inset;
+}
+
+/* .rsm-menu ul > li.current-menu-ancestor li {
+    box-shadow:none;
+} */
+/* .rsm-menu ul > li.current-menu-item li {
+    box-shadow:none;
+} */

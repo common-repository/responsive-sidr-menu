@@ -1,0 +1,7 @@
+== Changelog ==
+ 
+= 1.0.0 =
+* First stable version
+
+= 1.0.1 =
+* Added a new setting which displays a message if you have / have not published any widgets before or after the menu.
